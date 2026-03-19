@@ -48,7 +48,7 @@ async function fetchData() {
       }
 
       // Использование:
-      document.body.innerHTML = getHelloText(location_user);
+      document.getElementById('i').innerHTML = getHelloText(location_user);
   } catch (error) {
     // Обработка ошибок сети
     console.error("Ошибка при получении данных:", error);
