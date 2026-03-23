@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link id="themeColor" rel="stylesheet" href="style/style-2.css">
     <style>
         #mouseOutElem{
             width: 80%;
@@ -12,12 +13,13 @@
             margin-left: auto;
             background-color: darkcyan;
         }
-    </style>
+        </style>
 </head>
 <body>
+    <button onclick="clickButton()" >Сменить цветовую схемц сайта</button>
     <p id="parag">Text my text</p>
 	<hr>
-	<i id="i"></i>
+	<i id="i" onclick="alert('Это онклик сработал');">OnClick</i>
     <form action="second.html">
         <input type="text" name="user_name">
         <input type="text" name="message">
@@ -30,6 +32,8 @@
     <!-- <script src="getElement.js"></script> -->
     <!-- <script src="fetch.js"></script> -->
     <!-- <script src="getDataForm.js"></script> -->
-    <script src="window.js"></script>
+    <!-- <script src="window.js"></script> -->
+    <script src="event.js"></script>
+    <script src="change-theme_color.js"></script>
 </body>
 </html>
