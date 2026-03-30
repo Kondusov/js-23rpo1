@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+    <p id="text">Это пример текста с несколькими словами для проверки</p>
+
+    <script>
+        document.getElementById('text').addEventListener('click', function(e) {
+            if (e.target.tagName === 'SPAN') {
+                let word = e.target.textContent;
+                e.target.textContent = word.split('').reverse().join('');
+            }
+        });
+
+        let paragraph = document.getElementById('text');
+        let html = '';
+        let words = paragraph.textContent.split(' ');
+        for (let i = 0; i < words.length; i++) {
+            html += '<span style="cursor:pointer;margin:0 2px;">' + words[i] + '</span> ';
+        }
+        paragraph.innerHTML = html;
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 2</title>
+</head>
+<body>
+    <form id="numForm">
+        <input type="number" id="numInput" min="0" max="9" required>
+        <button type="submit">Перевести</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        function numToWord(n) {
+            let words = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять'];
+            return words[n];
+        }
+
+        function showResults() {
+            let data = JSON.parse(localStorage.getItem('nums') || '[]');
+            let out = '';
+            for (let i = 0; i < data.length; i++) {
+                out += data[i].num + ' - ' + data[i].word + '<br>';
+            }
+            document.getElementById('results').innerHTML = out;
+        }
+
+        document.getElementById('numForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let num = parseInt(document.getElementById('numInput').value);
+            if (num >= 0 && num <= 9) {
+                let word = numToWord(num);
+                let data = JSON.parse(localStorage.getItem('nums') || '[]');
+                data.push({num: num, word: word});
+                localStorage.setItem('nums', JSON.stringify(data));
+                document.getElementById('numInput').value = '';
+                showResults();
+            }
+        });
+
+        showResults();
+    </script>
+</body>
+</html>
