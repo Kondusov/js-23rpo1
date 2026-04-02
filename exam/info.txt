@@ -31,56 +31,17 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript
 Что такое переменные, способы объявления переменных, присвоение значения, обновление переменной.
 Типы переменных (данных), Динамическая типизация.
 Операторы (арифметические, инкремента и декремента, присваивания, сравнения)
-Методы для работы со строками
+Методы для работы со строками (split, trim, replace, lenght, includes)
 Массивы(Создание, получение и изменение элементов, нахождение длины массива, и другие методы)
 Условные выражения
 Циклы (Loops)
 Функции (в том числе и стрелочные)
-Объекты в JavaScript
-Классы в JavaScript (конструктор, наследование, приватность методов, super, this, static)
-session storage или local storage (различие, методы)
+session storage или local storage (различие, методы).
 работа с JSON
 асинхронность (Promises, async/await)
 DOM-манипуляции.
-Клиентский веб API:
+Клиентский веб API.
 
-Объектная модель документа
-Создание и размещение новых узлов
-    let link = document.querySelector("a");
-    link.textContent = "Mozilla Developer Network";
-    link.href = "https://developer.mozilla.org";
-    Document.getElementById()
-    Document.getElementsByTagName()
-    let sect = document.querySelector("section");
-    let para = document.createElement("p");
-    para.textContent = "We hope you enjoyed the ride.";
-    sect.appendChild(para);
-    let text = document.createTextNode(
-    " — the premier source for web development knowledge.",
-    );
-    let linkPara = document.querySelector("p");
-    linkPara.appendChild(text);
-Перемещение и удаление элементов
-    sect.appendChild(linkPara);
-    sect.removeChild(linkPara);
-    linkPara.parentNode.removeChild(linkPara);
-Управление стилями
-    para.style.color = "white";
-    para.setAttribute("class", "highlight");
-Получение полезной информации из объекта Window
-    let div = document.querySelector("div");
-    let WIDTH = window.innerWidth;
-    let HEIGHT = window.innerHeight;
-
-    div.style.width = WIDTH + "px";
-    div.style.height = HEIGHT + "px";
-
-    window.onresize = function () {
-        WIDTH = window.innerWidth;
-        HEIGHT = window.innerHeight;
-        div.style.width = WIDTH + "px";
-        div.style.height = HEIGHT + "px";
-      };
 
 ////////////
 
@@ -89,21 +50,18 @@ DOM-манипуляции.
 Объявление переменных: const (основная), let (если нужно менять значение).
 Стрелочные функции: () => {}.
 Шаблонные строки: `Строка ${variable}`.
-Деструктуризация массивов и объектов: { name } = user.
 Работа с данными:
 Типы данных: Строки, числа, булевы значения, массивы [] и объекты {}.
-JSON: методы JSON.stringify() и JSON.parse() (критично для API).
-Методы массивов: .map(), .filter(), .forEach().
+JSON: методы JSON.stringify() и JSON.parse().
+Методы массивов: .map(), .filter(), .forEach()., includes()
 Асинхронность :
-Promise: понимание then()/catch().
 async/await: современный способ работы с запросами.
 fetch(): отправка и получение HTTP-запросов.
 DOM (для отображения результатов API):
 Поиск элементов: document.querySelector(), document.querySelectorAll().
-Изменение контента: .textContent, .innerHTML.
+Изменение контента: .textContent, .innerHTML, append(), prepend()
 Обработка событий: .addEventListener('click', ...).
 HTML атрибут onclick и другие подобные.
 
-Итоговый «минимум»: научиться отправлять запрос через fetch,
-получать JSON, обрабатывать ошибки try/catch и выводить данные
-на страницу через DOM-методы.
+Итоговый «минимум»: научиться отправлять запрос через fetch, получать JSON,
+обрабатывать ошибки try/catch и выводить данные на страницу через DOM-методы.

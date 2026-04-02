@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        jQuery — это библиотека JavaScript, которая упрощает работу с
+        HTML-документами, обработку событий и анимацию.
+        Главная фишка — короткий синтаксис через символ $.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus deserunt reprehenderit officiis temporibus quidem id obcaecati iste eveniet nam, quod adipisci sunt pariatur est animi. Neque facere voluptatem quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus deserunt reprehenderit officiis temporibus quidem id obcaecati iste eveniet nam, quod adipisci sunt pariatur est animi. Neque facere voluptatem quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus deserunt reprehenderit officiis temporibus quidem id obcaecati iste eveniet nam, quod adipisci sunt pariatur est animi. Neque facere voluptatem quas?</p>
+    <!-- <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script> -->
+        <script src="jq.js"></script>
+    <script>
+        // Меняем текст
+         $("p").text("Новый текст для всех абзацев от jquery");
+        // document.addEventListener('DOMContentLoaded',()=>{
+        //     let collectionP = document.querySelectorAll('p');
+        //     collectionP.forEach(element => {
+        //     element.textContent = 'Текст заменен с помощью querySelectorAll';
+        //     });
+        // });
+        $(document).ready(function() {
+            $('body').append('<p>Document ready</p>');
+        });
+        
+
+        // Меняем HTML внутри блока с id="main"
+        $("#main").html("<strong>Жирный текст</strong>"); 
+        // document.getElementById('#main').innerHTML="<strong>Жирный текст</strong>";
+
+        // Скрываем все элементы с классом .ads
+        $(".ads").hide();
+    </script>
+</body>
+
+</html>
