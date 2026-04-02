@@ -1,0 +1,2 @@
+Выберите подходящую по сложности задачу и решите.
+https://github.com/Kondusov/js-23rpo1/blob/main/exam/examples.txt
